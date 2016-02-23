@@ -1,6 +1,6 @@
 # cli-weather
 
-Cli-weather permits to get the latest weather forecast in the area.
+> Cli-weather permits to get the latest weather forecast in the area.
 
 ## How to use
 
