@@ -45,11 +45,18 @@ Config.prototype.control = function () {
     //If there's no key like s or save nor argument like the ip address
     if (keys === 0 || args.v) 
     {
+        //Read the file directly.
         read(this.args, this.units, this.ip);
-    } else if (args.s || args.save) 
+    } 
+    
+    //If there's a save argument.
+    else if (args.s || args.save) 
     {
+        //Write the configuration file
         write(this.args, this.units, this.ip);
-    } else if (args.c || args.a !== null || args.address !== null) 
+    } 
+    //Handle error
+    else if (args.c || args.a !== null || args.address !== null) 
     {
         handleArgs(this.args, this.units, this.ip);
     }
@@ -63,7 +70,7 @@ if(!String.prototype.includes) {
 
 
 function write(args, units, ip) {
-
+    
     console.log(chalk.red('you may have to use ') + chalk.bgBlack.white('sudo') +
         chalk.red(' to save presets. a fix is on the way, don\'t worry.'));
 

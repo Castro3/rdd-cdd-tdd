@@ -10,10 +10,11 @@ It locates your device by using your ip-address.
 ### How to use
 
 1. Install Nodejs.
-1. Clone the repository.
-1. Go to the weather directory
-1. Install the packages with "npm install"
-1. Run "node index.js"
+1. Clone this repository to your workspace.
+1. Go to the weather directory.
+1. Install the packages with "npm install".
+1. Run "node index.js".
 
+You can use -s or -save argument to save a preset file.
 ### License
 [Uncopyrighted](http://zenhabits.net/uncopyright/)
