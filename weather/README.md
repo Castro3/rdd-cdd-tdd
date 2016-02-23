@@ -5,7 +5,7 @@
 ### Introduction
 Cli-weather returns the forecast of the area for 3 days.
 It locates your device by using your ip-address.
->notice: you still need to be connected to the internet.
+> notice: you still need to be connected to the internet.
 
 ### How to use
 
