@@ -38,11 +38,11 @@ Config.prototype.sudo = function () {
     }
 };
 
-//Read and write function here
+//Decides what function to use based on arguments
 Config.prototype.control = function () {
     var keys = Object.keys(this.args).length - 1,
         args = this.args;
-
+    //If there's no key like s or save nor argument like the ip address
     if (keys === 0 || args.v) 
     {
         read(this.args, this.units, this.ip);
