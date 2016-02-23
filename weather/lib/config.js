@@ -1,3 +1,4 @@
+//Variables
 var args = require('./args'),
     chalk = require('chalk'),
     fs = require('fs'),
@@ -9,18 +10,21 @@ var args = require('./args'),
 var path = pathing.dirname(require.main.filename) + '/lib/config.json',
     help = require('./help');
 
+//Constructor
 function Config(units, ip) {
+    //get the arguments
     this.args = parseArgs(process.argv.slice(2));
     this.units = units;
     this.ip = ip;
 }
 
+//Start function
 Config.prototype.sudo = function () {
 
     var that = this;
-
+    //if 's' or 'save' is passed as argument
     if (that.args.s === true || that.args.save === true) {
-
+        
         var args = ' weather ',
             arr = process.argv.slice(2);
 
@@ -34,15 +38,19 @@ Config.prototype.sudo = function () {
     }
 };
 
+//Read and write function here
 Config.prototype.control = function () {
     var keys = Object.keys(this.args).length - 1,
         args = this.args;
 
-    if (keys === 0 || args.v) {
+    if (keys === 0 || args.v) 
+    {
         read(this.args, this.units, this.ip);
-    } else if (args.s || args.save) {
+    } else if (args.s || args.save) 
+    {
         write(this.args, this.units, this.ip);
-    } else if (args.c || args.a !== null || args.address !== null) {
+    } else if (args.c || args.a !== null || args.address !== null) 
+    {
         handleArgs(this.args, this.units, this.ip);
     }
 };

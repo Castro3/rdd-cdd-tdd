@@ -2,6 +2,10 @@
 
 > Cli-weather permits to get the latest weather forecast in the area.
 
+## Introduction
+Cli-weather returns the forecast of the area for 3 days.
+It locates your device by using your ip-address.
+
 ## How to use
 
 1. Install Nodejs.
