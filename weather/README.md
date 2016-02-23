@@ -7,7 +7,7 @@ Cli-weather returns the forecast of the area for 3 days.
 It locates your device by using your ip-address.
 > notice: you still need to be connected to the internet.
 
-### How to use
+### Prerequisite
 
 1. Install Nodejs.
 1. Clone this repository to your workspace.
@@ -15,6 +15,18 @@ It locates your device by using your ip-address.
 1. Install the packages with "npm install".
 1. Run "node index.js".
 
-You can use -s or -save argument to save a preset file.
+### How to use
+Get the forecast directly
+> Run "node index.js"
+
+Get help
+> Run "node index.js --help"
+
+Set longitude and latitude
+> Run "node index.js --lat [latitude] --long [longitude]
+
+Save preset
+> Run "node index.js -s"
+
 ### License
 [Uncopyrighted](http://zenhabits.net/uncopyright/)

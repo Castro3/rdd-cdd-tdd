@@ -55,7 +55,7 @@ Config.prototype.control = function () {
         //Write the configuration file
         write(this.args, this.units, this.ip);
     } 
-    //Handle error
+    //Handle arguments
     else if (args.c || args.a !== null || args.address !== null) 
     {
         handleArgs(this.args, this.units, this.ip);
@@ -69,6 +69,7 @@ if(!String.prototype.includes) {
 }
 
 
+//Writes a preset configuration file
 function write(args, units, ip) {
     
     console.log(chalk.red('you may have to use ') + chalk.bgBlack.white('sudo') +
@@ -88,11 +89,15 @@ function write(args, units, ip) {
 
 }
 
+
+//Read the preset file.
 function read(args, units, ip) {
 
-    if (args.c && !(args.s || args.save)) {
+    if (args.c && !(args.s || args.save)) 
+    {
         handleArgs(args, units, ip);
-    } else {
+    } 
+    else {
 
         fs.readFile(path, function (err, data) {
             if (err) {
@@ -100,7 +105,8 @@ function read(args, units, ip) {
                     chalk.red(' or the ') + chalk.bgBlack.white('-save') + chalk.red('\n option after any commands to save preferences'));
 
                 handleArgs(args, units, ip);
-            } else {
+            } 
+            else {
                 if (args.v || args.verbose) {
                     console.log(chalk.green('✓ read preset'));
                 }
@@ -111,6 +117,7 @@ function read(args, units, ip) {
     }
 }
 
+//Handle the arguments to show them to the console.
 function handleArgs(argv, units, ip) {
 
     help(argv);
