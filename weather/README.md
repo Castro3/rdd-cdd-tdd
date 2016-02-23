@@ -1,8 +1,8 @@
-## cli-weather
+# cli-weather
 
 Cli-weather permits to get the latest weather forecast in the area.
 
-# How to use
+## How to use
 
 1. Install Nodejs.
 1. Clone the repository.
@@ -10,5 +10,5 @@ Cli-weather permits to get the latest weather forecast in the area.
 1. Install the packages with "npm install"
 1. Run "node index.js"
 
-# License
+## License
 [Uncopyrighted](http://zenhabits.net/uncopyright/)
