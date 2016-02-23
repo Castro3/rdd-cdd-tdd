@@ -15,9 +15,7 @@ describe('Config', function () {
     
     var Config = new config(units, ip);
     it('has 3 props', function () {
-        expect(Config.args).to.exist;
-        expect(Config.ip).to.exist;
-        expect(Config.units).to.exist;
+        expect(Object.keys(Config).length).to.eql(3);
     });
 
     it('after construction, 2 props are populated', function () {
